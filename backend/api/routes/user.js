@@ -55,6 +55,7 @@ router.post('/register', (req, res, next) => {
 })
 
 router.get("/login", (req, res, next) => {
+    console.log(req.body.email);
     userSchema.find({ email: req.body.email })
         .exec()
         .then((user) => {

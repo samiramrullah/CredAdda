@@ -38,9 +38,6 @@ app.use((req, res, next) => {
 //Routes used
 app.use('/user', userRoutes)
 
-
-
-
 //Error handeling
 //if no paths matched
 
