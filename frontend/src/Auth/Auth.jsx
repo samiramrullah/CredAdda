@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
-import sideimage from '../assets/authImg.png';
 import { useState } from 'react';
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios'
+import sideimage from '../assets/authImg.png';
 
 const Auth = () => {
     const { id } = useParams();
@@ -19,14 +20,25 @@ const Auth = () => {
                 email,
                 password
             }
+            axios.post('http://127.0.0.1:5001/user/register',data)
+            .then((result)=>console.log(result))
+            .catch(err=>console.log(err))
             console.log(data);
             setEmail('')
             setPassword('')
             setCnfPassword('')
         }
-
     }
-
+    const loginHandler=(e)=>{
+        e.preventDefault();
+        const data={
+            email,
+            password,
+        }
+        axios.post('http://127.0.0.1:5001/user/login',data)
+        .then((res)=>console.log(res))
+        .catch(err=>console.log(err))
+    }
     return (
         <>
             <section className=" font-poppins">
@@ -70,7 +82,7 @@ const Auth = () => {
                                             </div>
                                             <h2 className="mb-4 text-xl font-bold lg:mb-8 lg:text-3xl ">
                                                 Login our account</h2>
-                                            <form action="" className="p-0 m-0">
+                                            <form action="" className="p-0 m-0" onSubmit={loginHandler}>
                                                 <div>
                                                     <label
                                                         className="text-lg font-medium ">Email:</label>
