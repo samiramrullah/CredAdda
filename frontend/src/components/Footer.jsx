@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
-
       <footer className="w-full py-4 " style={{backgroundColor:'#fff8f8'}}>
         <div className="md:px-12 lg:px-28">
           <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">

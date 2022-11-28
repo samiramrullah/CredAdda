@@ -5,7 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import { Routes, Route } from 'react-router-dom'
 import Auth from './Auth/Auth';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Dashboard from './pages/Dashboard';
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/auth/:id' element={<Auth />} />
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

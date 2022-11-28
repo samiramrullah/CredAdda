@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import sideimage from '../assets/authImg.png';
 
@@ -9,6 +9,7 @@ const Auth = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [cnfPassword, setCnfPassword] = useState('');
+    const navigate=useNavigate();
 
     const signUpHandler = (e) => {
         e.preventDefault();
@@ -36,7 +37,8 @@ const Auth = () => {
             password,
         }
         axios.post('http://127.0.0.1:5001/user/login',data)
-        .then((res)=>console.log(res))
+        .then((res)=>localStorage.setItem('userToken',res.data.token))
+        .then((res)=>navigate('/dashboard'))
         .catch(err=>console.log(err))
     }
     return (

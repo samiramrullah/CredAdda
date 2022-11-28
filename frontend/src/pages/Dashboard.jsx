@@ -124,7 +124,7 @@ const Dashboard = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="a"
                                     class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
                                 >
                                     <svg
