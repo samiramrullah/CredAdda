@@ -3,8 +3,8 @@ import React from 'react'
 const Team = () => {
     return (
         <>
-            <section class="flex items-center bg-stone-100 xl:h-screen font-poppins dark:bg-gray-800 ">
-                <div class="justify-center flex-1 px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6">
+            <section class="flex items-center bg-stone-100  dark:bg-gray-800 ">
+                <div class="justify-center flex-1 px-4  mx-auto max-w-7xl lg:py-4 md:px-6">
                     <div class="flex flex-wrap ">
                         <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
                             <div class="mb-10 lg:max-w-lg lg:mb-0">
