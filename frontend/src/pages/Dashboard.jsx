@@ -1,7 +1,8 @@
 import React from 'react'
 import profilePic from '../assets/profile.jpg'
-import {Link, Routes, Route} from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import Profile from '../components/Profile';
+import Post from '../components/Post';
 const Dashboard = () => {
     return (
         <>
@@ -146,7 +147,7 @@ const Dashboard = () => {
                     </div>
 
                     <div class="-mx-6 flex items-center justify-between border-t px-6 pt-4 dark:border-gray-700">
-                        
+
                         <button class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +270,8 @@ const Dashboard = () => {
 
                     <div class="px-6  2xl:container">
                         <Routes>
-                            <Route path='/' element={<Profile/>}/>
+                            <Route path='/' element={<Profile />} />
+                            <Route path='/post' element={<Post />} />
                         </Routes>
                     </div>
                 </div>
