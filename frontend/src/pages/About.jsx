@@ -3,7 +3,7 @@ import Team from "../components/Team";
 
 const About = () => {
     return (
-        <>
+        <div className="mt-14 md:mt-0 ">
         <section class="flex items-center bg-stone-100 xl:h-screen font-poppins dark:bg-gray-800 ">
         <div class="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
             <div class="px-4 mb-10 md:text-center md:mb-20">
@@ -78,7 +78,7 @@ const About = () => {
         </div>
     </section>
     <Team/>
-    </>
+    </div>
     );
 };
 
