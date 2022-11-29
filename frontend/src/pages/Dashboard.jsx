@@ -1,12 +1,17 @@
 import React from 'react'
 import profilePic from '../assets/profile.jpg'
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route,useNavigate } from 'react-router-dom';
 import Profile from '../components/Profile';
 import Post from '../components/Post';
 const Dashboard = () => {
+    const navigate=useNavigate();
+    const logoutHandler=()=>{
+        localStorage.setItem('userToken','')
+        navigate('/')
+    }
     return (
         <>
-            <body class="bg-gray-100 dark:bg-gray-900">
+            <div class="bg-gray-100 dark:bg-gray-900">
                 <aside
                     class="fixed top-0 z-10 ml-[-100%] flex h-screen w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700"
                 >
@@ -148,7 +153,7 @@ const Dashboard = () => {
 
                     <div class="-mx-6 flex items-center justify-between border-t px-6 pt-4 dark:border-gray-700">
 
-                        <button class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300">
+                        <button class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300" onClick={logoutHandler}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="h-6 w-6"
@@ -275,7 +280,7 @@ const Dashboard = () => {
                         </Routes>
                     </div>
                 </div>
-            </body>
+            </div>
 
         </>
     )
