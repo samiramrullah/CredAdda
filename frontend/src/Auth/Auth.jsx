@@ -21,7 +21,7 @@ const Auth = () => {
                 email,
                 password
             }
-            axios.post('http://127.0.0.1:5001/user/register',data)
+            axios.post(`${process.env.REACT_APP_API_KEY}/user/register`,data)
             .then((result)=>console.log(result))
             .catch(err=>console.log(err))
             console.log(data);
@@ -36,7 +36,7 @@ const Auth = () => {
             email,
             password,
         }
-        axios.post('http://127.0.0.1:5001/user/login',data)
+        axios.post(`${process.env.REACT_APP_API_KEY}/user/login`,data)
         .then((res)=>localStorage.setItem('userToken',res.data.token))
         .then((res)=>navigate('/dashboard'))
         .catch(err=>console.log(err))
