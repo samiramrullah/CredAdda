@@ -1,5 +1,5 @@
 import React from 'react'
-
+import profilePic from '../assets/profile.jpg'
 const Team = () => {
     return (
         <>
@@ -30,7 +30,7 @@ const Team = () => {
                                     <div
                                         class="inline-block mb-3 overflow-hidden text-xs text-white bg-blue-500 rounded-full w-44 h-44 sm:w-64 sm:h-64">
                                         <img class="object-cover w-full h-full transition-all hover:scale-110"
-                                            src="https://i.postimg.cc/JzmrHQmk/pexels-pixabay-220453.jpg" alt=""/>
+                                            src={profilePic} alt=""/>
                                     </div>
                                     <h2 class="text-xl font-bold dark:text-gray-400">Henry Robinson</h2>
                                     <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">Director</p>
