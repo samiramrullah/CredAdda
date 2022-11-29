@@ -1,5 +1,8 @@
 const http=require('http')
 const port=process.env.PORT ||5001
+console.log('====================================');
+console.log(process.env.PORT);
+console.log('====================================');
 const app=require('./app')
 const dotenv = require('dotenv');
 dotenv.config();
