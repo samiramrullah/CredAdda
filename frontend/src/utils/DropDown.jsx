@@ -2,9 +2,10 @@ import React from 'react';
 import { DownOutlined, } from '@ant-design/icons';
 import { Button, Dropdown, Space, } from 'antd';
 
-const DropdownCustom = ({setSendingCountry}) => {
+const DropdownCustom = ({setSendingCountry,setRecivingCountry}) => {
   const handleMenuClick = (e) => {
     setSendingCountry(e.key)
+    setRecivingCountry(e.key)
   };
   const items = [
     {
