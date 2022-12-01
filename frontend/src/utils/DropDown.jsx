@@ -1,36 +1,36 @@
 import React from 'react';
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Dropdown, Space,  } from 'antd';
+import { DownOutlined, } from '@ant-design/icons';
+import { Button, Dropdown, Space, } from 'antd';
 
-const handleMenuClick = (e) => {
-  // message.info('Click on menu item.');
-  console.log('click', e.key);
-};
-const items = [
-  {
-    label: '1st menu item',
-    key: '1',
-    icon: <UserOutlined />,
-  },
-  {
-    label: '2nd menu item',
-    key: '2',
-    icon: <UserOutlined />,
-  },
-  {
-    label: '3rd menu item',
-    key: '3',
-    icon: <UserOutlined />,
-  },
-];
-const menuProps = {
-  items,
-  onClick: handleMenuClick,
-};
-const DropdownCustom = () => (
-  <Space wrap>
+const DropdownCustom = ({setSendingCountry}) => {
+  const handleMenuClick = (e) => {
+    setSendingCountry(e.key)
+  };
+  const items = [
+    {
+      label: 'Canada',
+      key: '1',
+      // icon: <NA/>,
+    },
+    {
+      label: 'Qatar',
+      key: '2',
+      // icon: <QA />,
+    },
+    {
+      label: 'USA',
+      key: '3',
+      // icon: <IN />,
+    },
+  ];
+  const menuProps = {
+    items,
+    onClick: handleMenuClick,
+  };
+  return (
+    <Space wrap>
     <Dropdown menu={menuProps}>
-      <Button>
+      <Button defaultValue={'Select'}>
         <Space>
           Button
           <DownOutlined />
@@ -38,5 +38,7 @@ const DropdownCustom = () => (
       </Button>
     </Dropdown>
   </Space>
-);
-export default DropdownCustom;
+  )
+}
+
+export default DropdownCustom
