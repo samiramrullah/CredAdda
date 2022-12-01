@@ -63,9 +63,9 @@ const Dashboard = () => {
                                     >
                                         <path
                                             class="fill-current text-gray-300 group-hover:text-cyan-300"
-                                            fill-rule="evenodd"
+                                            fillRule="evenodd"
                                             d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z"
-                                            clip-rule="evenodd"
+                                            clipRule="evenodd"
                                         />
                                         <path
                                             class="fill-current text-gray-600 group-hover:text-cyan-600 dark:group-hover:text-sky-400"
@@ -88,9 +88,9 @@ const Dashboard = () => {
                                     >
                                         <path
                                             class="fill-current text-gray-600 group-hover:text-cyan-600 dark:group-hover:text-sky-400"
-                                            fill-rule="evenodd"
+                                            fillRule="evenodd"
                                             d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
-                                            clip-rule="evenodd"
+                                            clipRule="evenodd"
                                         />
                                         <path
                                             class="fill-current text-gray-300 group-hover:text-cyan-300"
@@ -140,9 +140,9 @@ const Dashboard = () => {
                                         />
                                         <path
                                             class="fill-current text-gray-600 group-hover:text-cyan-600 dark:group-hover:text-sky-400"
-                                            fill-rule="evenodd"
+                                            fillRule="evenodd"
                                             d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                                            clip-rule="evenodd"
+                                            clipRule="evenodd"
                                         />
                                     </svg>
                                     <span class="group-hover:text-gray-700 dark:group-hover:text-white">Home</span>
@@ -162,9 +162,9 @@ const Dashboard = () => {
                                 stroke="currentColor"
                             >
                                 <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                                 />
                             </svg>
@@ -185,9 +185,9 @@ const Dashboard = () => {
                                     stroke="currentColor"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         d="M4 6h16M4 12h16M4 18h16"
                                     />
                                 </svg>
@@ -247,9 +247,9 @@ const Dashboard = () => {
                                         stroke="currentColor"
                                     >
                                         <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
                                             d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
                                         />
                                     </svg>
