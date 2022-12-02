@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import { Form, Input } from 'antd';
 import { QA, CA, US, IN } from 'country-flag-icons/react/3x2';
+import  {useDispatch,useSelector } from 'react-redux';
+import {convertAmount} from '../Redux/PostAmountSlice'
 const Postcard = () => {
     const countriesName = [
         'NEPAL',
@@ -10,6 +12,7 @@ const Postcard = () => {
         'INDIA',
         'USA',
     ]
+    const dispatch=useDispatch();
     const [sendingCountry, setSendingCountry] = useState('');
     const [recivingCountry, setRecivingCountry] = useState('')
     const [sendingAmount,setSendingAmount]=useState();
@@ -21,6 +24,7 @@ const Postcard = () => {
         }
         else {
             setSendingCountry(e.target.value)
+           
         }
     }
     const countryToRecieveHandler = (e) => {
@@ -36,6 +40,9 @@ const Postcard = () => {
    const sendAmountHandler=(e)=>{
     setSendingAmount(e.target.value)
     setRecivingAmout(sendingAmount)
+   }
+   const convertAmountHandler=()=>{
+    dispatch(convertAmount('USD','INR'))
    }
     return (
         <>
@@ -113,7 +120,7 @@ const Postcard = () => {
                 </div>
             </section>
             <div className='text-center'>
-                <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                <button onClick={convertAmountHandler} class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     Send
                 </button>
             </div>

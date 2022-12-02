@@ -27,6 +27,9 @@ export default postAmountSlice.reducer;
 //thunk
 
 export const convertAmount = (fromcurrency, tocurrency) => {
+    console.log('====================================');
+    console.log(fromcurrency,tocurrency);
+    console.log('====================================');
     return async function convertAmountThunk(dispatch, getstate) {
         dispatch(setConvertStatus(STATUSES.LOADING));
         try {
