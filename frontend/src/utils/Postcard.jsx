@@ -13,6 +13,7 @@ const Postcard = () => {
         'USA',
     ]
     const dispatch=useDispatch();
+    const {data}=useSelector((state)=>state.post)
     const [sendingCountry, setSendingCountry] = useState('');
     const [recivingCountry, setRecivingCountry] = useState('')
     const [sendingAmount,setSendingAmount]=useState();
@@ -36,14 +37,14 @@ const Postcard = () => {
         }
 
     }
-    
    const sendAmountHandler=(e)=>{
     setSendingAmount(e.target.value)
     setRecivingAmout(sendingAmount)
    }
    const convertAmountHandler=()=>{
-    dispatch(convertAmount('USD','INR'))
+    dispatch(convertAmount('INR','USD',sendingAmount))
    }
+   console.log(data);
     return (
         <>
             <section class="flex mt-10 lg:h-full  font-poppins dark:bg-gray-900 ">

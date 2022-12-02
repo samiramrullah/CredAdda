@@ -26,10 +26,7 @@ export default postAmountSlice.reducer;
 
 //thunk
 
-export const convertAmount = (fromcurrency, tocurrency) => {
-    console.log('====================================');
-    console.log(fromcurrency,tocurrency);
-    console.log('====================================');
+export const convertAmount = (fromcurrency, tocurrency,amount) => {
     return async function convertAmountThunk(dispatch, getstate) {
         dispatch(setConvertStatus(STATUSES.LOADING));
         try {
@@ -42,9 +39,9 @@ export const convertAmount = (fromcurrency, tocurrency) => {
                 headers: myHeaders
             };
 
-            fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${fromcurrency}&from=${tocurrency}&amount=5000`, requestOptions)
+            fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${fromcurrency}&from=${tocurrency}&amount=${amount}`, requestOptions)
                 .then(response => response.text())
-                .then(result => console.log(result))
+                .then(result => dispatch(SetConvert(result)))
                 .catch(error => console.log('error', error));
         } catch (error) {
             dispatch(setConvertStatus(STATUSES.ERROR))

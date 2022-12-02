@@ -105,6 +105,7 @@ const Auth = () => {
                                                                 placeholder="Enter password"
                                                                 onChange={(e) => setPassword(e.target.value)}
                                                             />
+                                                            
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                                 className="absolute right-0 mr-3   bi bi-eye-slash"
                                                                 fill="currentColor" viewBox="0 0 16 16">
