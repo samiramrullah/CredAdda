@@ -37,9 +37,6 @@ const Postcard = () => {
     setSendingAmount(e.target.value)
     setRecivingAmout(sendingAmount)
    }
-     console.log('====================================');
-     console.log(recivingAmout);
-     console.log('====================================');
     return (
         <>
             <section class="flex mt-10 lg:h-full  font-poppins dark:bg-gray-900 ">
