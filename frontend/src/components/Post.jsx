@@ -3,7 +3,7 @@ import Postcard from '../utils/Postcard'
 
 const Post = () => {
   return (
-   <div className='mt-10'>
+   <div className='mt-10 '>
    <Postcard/>
    </div>
   )
